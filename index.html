@@ -341,6 +341,23 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 .card,.method-item,.incl-item,.step,.flow li{animation:rise backwards linear;animation-timeline:view();animation-range:entry 0% entry 35%}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Who is this for? */
+.who{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.who-item{display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding:28px;background:var(--mist);border:1px solid var(--line);border-radius:var(--r-md);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s,background .3s}
+.who-item:hover{transform:translateY(-3px);background:#fff;border-color:#b9d6d9;box-shadow:var(--shadow-sm)}
+.who-icon{width:56px;height:56px;display:grid;place-items:center;border-radius:14px;background:var(--teal-tint);font-size:1.7rem;line-height:1}
+.who-item h3{font-size:1.05rem;line-height:1.35;color:var(--ink)}
+@supports(animation-timeline:view()){.who-item{animation:rise backwards linear;animation-timeline:view();animation-range:entry 0% entry 35%}}
+@media(max-width:1000px){
+.who{grid-template-columns:1fr 1fr}
+/* un-freeze first column of the "Why only 3 students?" table on mobile */
+.vs tbody th{position:static;box-shadow:none}
+}
+@media(max-width:560px){
+.who{grid-template-columns:1fr;gap:14px}
+.who-item{flex-direction:row;align-items:center;gap:16px;padding:18px}
+}
   
 </style>
 </head>
@@ -479,7 +496,17 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 <div class="incl-item"><h3>Instructor Q&amp;A Support</h3><p>Submit questions in the course community and get a reply within one business day.</p></div>
 </div></div></section>
 
-<section class="band" id="faq"><div class="wrap faq-layout">
+<section class="band" id="who"><div class="wrap">
+<div class="head"><h2>Who is this for?</h2></div>
+<ul class="who">
+<li class="who-item"><span class="who-icon" aria-hidden="true">🎓</span><h3>Students &amp; Fresh Graduates</h3></li>
+<li class="who-item"><span class="who-icon" aria-hidden="true">📊</span><h3>Finance, Admin &amp; HR Professionals</h3></li>
+<li class="who-item"><span class="who-icon" aria-hidden="true">📈</span><h3>Business &amp; Data Professionals</h3></li>
+<li class="who-item"><span class="who-icon" aria-hidden="true">🏆</span><h3>Experienced Excel Users &amp; Certification Seekers</h3></li>
+</ul>
+</div></section>
+
+<section class="band band-mist" id="faq"><div class="wrap faq-layout">
 <div class="head"><h2>Common questions</h2><p>Can't find your answer? Get in touch and we'll help.</p></div>
 <div class="faq-list">
 <details open><summary>Why is this more expensive than an online Excel course?<svg class="i"><use href="#i-chevron"/></svg></summary><p>Because you're not buying Excel videos. You're buying coaching aimed at passing a specific exam: a diagnostic, an instructor who reviews your work, practice files, timed mock exams, and a free class retake if you don't pass. A self-paced course can't do those things.</p></details>
