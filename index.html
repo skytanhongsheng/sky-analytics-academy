@@ -16,6 +16,10 @@ body{font-family:var(--sans);color:var(--text);background:#fff;font-size:16px;li
 img{max-width:100%;display:block}a{color:inherit}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.wrap {margin-top: -40px; /* Adjust this value to move it up or down */
+  position: relative;
+  z-index: 1;
+}
 .i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .92rem/1 var(--sans);padding:14px 24px;border-radius:var(--r-sm);border:1px solid transparent;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s}
 .btn-navy{background:var(--brand);color:#fff}.btn-navy:hover{background:#163956}
