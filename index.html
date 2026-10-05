@@ -147,6 +147,95 @@ footer{background:#071827;color:#9fb4c6;padding:40px 0 32px}
 .safety{grid-template-columns:1fr;padding:30px 24px}}
 @media(max-width:560px){.brand img{height:36px}.nav-cta{display:none}.nav-toggle{margin-left:auto}.facts ul,.steps{grid-template-columns:1fr}.facts li,.facts li:nth-child(3){border-left:0;padding-left:0}.facts li:not(:first-child){border-top:1px solid var(--line)}.card-foot{flex-direction:column}.card-head,.card-body{padding-left:22px;padding-right:22px}.foot-top{flex-direction:column;align-items:flex-start}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  /* ===== MOBILE REFINEMENTS - paste just before </style> (must come after existing rules) ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.btn,.nav-toggle,.syl-x,.faq-list summary{-webkit-tap-highlight-color:transparent}
+
+@media(max-width:1000px){
+  /* mobile menu: scrollable if taller than the screen, easier tap targets */
+  .nav-links{max-height:calc(100dvh - 72px);overflow-y:auto;box-shadow:0 20px 30px -20px rgba(15,47,79,.35)}
+  .nav-links a{padding:16px 0;font-size:1rem}
+  .nav-toggle{width:44px;height:44px}
+  .hero::after{width:420px;height:420px;top:-120px;right:-160px}
+  .head{margin-bottom:32px}
+  .vs th,.vs td{padding:14px 16px}
+  .faq-layout .head{margin-bottom:0}
+}
+
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .nav-in{height:64px;gap:12px}
+  .nav-links{top:64px;max-height:calc(100dvh - 64px);padding:4px 18px 16px}
+  html{scroll-padding-top:76px}
+  .hero{padding-top:64px}
+  .hero-in{padding-top:44px;padding-bottom:52px;gap:32px}
+  .hero h1{font-size:clamp(1.85rem,8vw,2.2rem);line-height:1.15}
+  .hero-lead{font-size:1rem;margin:18px 0 28px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+  .seats{padding:24px}
+  .seats strong{font-size:1.4rem}
+  .btn{min-height:48px;padding:14px 20px}
+  .facts li{padding:16px 0}
+  .band,.contact{padding:56px 0}
+  .head{margin-bottom:28px}
+  h2{font-size:1.65rem}
+  .quote{font-size:1.1rem;padding-left:16px}
+  .flow li{padding:16px;gap:12px}
+
+  /* programme cards */
+  .card-head{padding:24px 22px 22px}
+  .card-head h3{font-size:1.45rem}
+  .card-body{padding:22px;gap:18px}
+  .price strong{font-size:2.1rem}
+  .specs{padding:16px 0}
+  .card-foot{padding:4px 22px 24px}
+  .card-foot .btn{width:100%}
+
+  /* comparison table: tighter, still swipeable, first column stays pinned */
+  .vs{min-width:600px;font-size:.85rem}
+  .vs th,.vs td{padding:12px 12px}
+  .vs tbody th{min-width:130px;max-width:150px;box-shadow:2px 0 0 var(--line)}
+  .vs-wrap{-webkit-overflow-scrolling:touch}
+
+  .safety{padding:24px 20px;gap:18px}
+  .safety-icon{width:56px;height:56px;font-size:1.6rem;border-radius:14px}
+
+  .step-n{margin-bottom:12px}
+  .steps{gap:28px}
+  .incl{gap:14px}
+  .incl-item{padding:20px}
+
+  .faq-list summary{padding:18px 0;gap:14px;min-height:48px}
+  .faq-list p{padding:0 0 20px 0}
+
+  .contact-in{gap:36px}
+  .contact-lead{margin-bottom:24px}
+  .contact .btn{width:100%}
+  .contact-card{padding:16px 18px;gap:14px}
+  .contact-icon{width:42px;height:42px}
+  .contact-value{font-size:.95rem}
+
+  footer{padding:32px 0 24px}
+  .foot-links{flex-wrap:wrap;gap:12px 22px}
+  .foot-bottom{flex-direction:column}
+
+  /* syllabus popup: near full-screen sheet */
+  .syl{width:calc(100vw - 16px);max-height:92dvh;border-radius:16px}
+  .syl-head{padding:16px 18px}
+  .syl-head h3{font-size:1.2rem}
+  .syl-x{width:44px;height:44px;flex-shrink:0}
+  .syl-body{padding:16px 18px;overscroll-behavior:contain}
+  .syl-foot{padding:14px 18px;flex-direction:column-reverse}
+}
+
+@media(max-width:360px){
+  .brand img{height:30px}
+  .hero h1{font-size:1.75rem}
+  .price strong{font-size:1.9rem}
+}
+  
 </style>
 </head>
 <body>
