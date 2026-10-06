@@ -368,6 +368,35 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
   .hero-logo::before{display:none}
   .hero-logo svg{width:110px}
 }
+/* Offer stack table */
+.ostack{margin:48px auto 0;max-width:780px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:36px}
+.ostack h3{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;color:var(--ink);margin-bottom:22px}
+.ostack-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.ostack-table thead th{background:var(--brand);color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:14px 20px}
+.ostack-table thead th:last-child,.ostack-table .val{text-align:right;white-space:nowrap}
+.ostack-table tbody td{padding:16px 20px;border-bottom:1px solid var(--line);vertical-align:middle}
+.ostack-table tbody tr:nth-child(even) td{background:var(--mist)}
+.ostack-table .lbl{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:2px}
+.ostack-table .core .lbl{color:var(--brand)}
+.ostack-table strong{display:block;color:var(--ink);font-size:.97rem;line-height:1.35}
+.ostack-table small{display:block;color:var(--muted);font-size:.85rem;margin-top:2px}
+.ostack-table .val{font-weight:700;color:var(--ink);font-size:1.05rem}
+.ostack-table tfoot th{text-align:left;padding:14px 20px;font-weight:600;color:var(--ink)}
+.ostack-table tfoot td{padding:14px 20px}
+.t-total th,.t-total td{background:#fff;border-bottom:1px solid var(--line)}
+.t-total s{color:var(--muted);text-decoration-thickness:2px;text-decoration-color:#e05a5a}
+.t-invest th,.t-invest td{background:var(--teal-tint);font-size:1.15rem}
+.t-invest .val{font-family:var(--serif);font-size:1.7rem;color:var(--ink)}
+.t-save th,.t-save td{background:var(--teal-deep);color:#fff}
+.t-save th{color:#fff}
+.t-save .val{color:#fff;font-size:1.25rem}
+.ostack-cta{width:100%;margin-top:24px;padding:17px 24px;font-size:1rem}
+@media(max-width:560px){
+.ostack{margin-top:32px;padding:22px 14px}
+.ostack-table thead th,.ostack-table tbody td,.ostack-table tfoot th,.ostack-table tfoot td{padding-left:14px;padding-right:14px}
+.ostack-table strong{font-size:.92rem}
+.t-invest .val{font-size:1.45rem}
+}
   
 </style>
 </head>
@@ -533,6 +562,31 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 </div>
 </div>
 </article>
+</div>
+
+<div class="ostack">
+<span class="offer-kicker">Your Offer Stack</span>
+<h3>Everything you need to pass, plus a safety net</h3>
+
+<table class="ostack-table">
+<thead>
+<tr><th scope="col">What You Get</th><th scope="col">Value</th></tr>
+</thead>
+<tbody>
+<tr class="core"><td><span class="lbl">Core</span><strong>40 hours of instructor-led MOS Excel coaching</strong><small>In a 3-student cohort</small></td><td class="val">$2,000</td></tr>
+<tr><td><span class="lbl">Bonus 1</span><strong>MOS Excel Exam voucher included</strong><small>With 1 extra retake</small></td><td class="val">$165</td></tr>
+<tr><td><span class="lbl">Bonus 2</span><strong>Timed mock exams + objective checklists</strong></td><td class="val">$400</td></tr>
+<tr><td><span class="lbl">Bonus 3</span><strong>Free class retake if you don't pass</strong></td><td class="val">$2,000</td></tr>
+<tr><td><span class="lbl">Bonus 4</span><strong>50% refund if you do not pass</strong></td><td class="val">$940</td></tr>
+</tbody>
+<tfoot>
+<tr class="t-total"><th scope="row">Total Real Value</th><td class="val"><s>$5,505</s></td></tr>
+<tr class="t-invest"><th scope="row">Your Investment</th><td class="val">$1,880</td></tr>
+<tr class="t-save"><th scope="row">You Save</th><td class="val">$3,625</td></tr>
+</tfoot>
+</table>
+
+<a class="btn btn-teal ostack-cta" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank" rel="noopener">Reserve your seat</a>
 </div>
   
 </div></section>
