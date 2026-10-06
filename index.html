@@ -436,56 +436,93 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 </div>
 </div></section>
   
+<!-- Paste this whole block in place of your existing <section id="courses"> ... </section> -->
+<style>
+/* Grand slam offer / value stack */
+.offer{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.offer-head{padding:30px 36px;color:#fff;background:linear-gradient(135deg,var(--ink),var(--navy) 60%,#12406a);position:relative;overflow:hidden}
+.offer-head::after{content:'';position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(58,184,185,.18)}
+.offer-head>*{position:relative;z-index:1}
+.offer-kicker{display:inline-block;font-size:.8rem;font-weight:600;padding:5px 13px;border-radius:999px;background:rgba(255,255,255,.14);margin-bottom:12px}
+.offer-head h3{font-family:var(--serif);font-size:1.7rem;line-height:1.2}
+.offer-head p{margin-top:6px;font-size:.95rem;color:#b4c6d6}
+.offer-table{width:100%;border-collapse:collapse;font-size:.95rem}
+.offer-table th,.offer-table td{padding:16px 36px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.offer-table thead th{background:var(--mist);color:var(--muted);font-size:.82rem;font-weight:600}
+.offer-table th:last-child,.offer-table td:last-child{text-align:right;white-space:nowrap}
+.offer-table td{color:var(--muted)}
+.offer-table td b{display:block;color:var(--ink);font-weight:600}
+.offer-table .tag{margin-right:8px;background:var(--teal-tint);border-color:#bfe3e3;color:var(--teal-deep)}
+.offer-table .val{color:var(--ink);font-weight:600}
+.offer-table tr.total td{background:var(--mist);color:var(--ink);font-weight:700}
+.offer-table tr.invest td{background:var(--teal-tint);color:var(--ink);font-weight:700;font-size:1.1rem}
+.offer-table tr.invest .val{font-size:1.5rem;color:var(--teal-deep)}
+.offer-table tr.save td{border-bottom:0;color:var(--teal-deep);font-weight:700}
+.offer-table tr.save .val{color:var(--teal-deep);font-size:1.15rem}
+.offer-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:22px 36px;background:var(--mist);border-top:1px solid var(--line)}
+.offer-foot span{font-size:.88rem;color:var(--muted)}
+.offer-foot b{color:var(--ink)}
+@media(max-width:560px){
+.offer{margin-top:28px}
+.offer-head{padding:24px 22px}.offer-head h3{font-size:1.4rem}
+.offer-table{font-size:.88rem}
+.offer-table th,.offer-table td{padding:14px 18px}
+.offer-foot{padding:18px 22px;flex-direction:column;align-items:stretch}
+.offer-foot .btn{width:100%}
+}
+</style>
+
 <section class="band band-mist" id="courses"><div class="wrap">
 <div class="head"><h2>Choose your certification path</h2></div>
 <div class="cards">
 <article class="card assoc">
 <div class="card-head"><span class="level">Associate</span><h3>MOS Excel 2019 Associate</h3><p>Prepares you for Exam MO-200</p></div>
 <div class="card-body">
-<div style="text-align: center;">
-  <div class="price">
-    <strong>$1,880</strong>
-    <span>per student</span>
-  </div>
-  <p class="price-note">
-    <b>40 hrs</b> of coaching · only <b>3 seats</b> per cohort
-  </p>
+<div style="text-align:center;">
+  <div class="price"><strong>$1,880</strong><span>per student</span></div>
+  <p class="price-note"><b>40 hrs</b> of coaching · only <b>3 seats</b> per cohort</p>
 </div>
-<!-- <p class="card-desc">Turn "I can use Excel" into a recognised credential. Covers every Exam MO-200 objective, whether you're starting your career or formally validating your skills.</p>
-<p class="fit"><b>Choose this if</b> you can use Excel and want a strong foundation and your first MOS Excel credential.</p> -->
-<!-- <ul class="specs"><li><svg class="i"><use href="#i-users"/></svg><span><b>Class size:</b> 1 coach to 3 students</span></li><li><svg class="i"><use href="#i-award"/></svg><span><b>Included:</b> MOS exam voucher with 1 extra retake</span></li> -->
-  <!-- <li><svg class="i"><use href="#i-check"/> -->
-  </svg>
-  <!-- <span><b>Suited to:</b> those with basic familiarity with Excel</span></li> -->
-</ul>
-<!-- <div><p class="topics-title">What you'll learn</p><ul class="chips"><li>Formatting cells</li><li>Tables and ranges</li><li>Formulas and functions</li><li>Importing and transforming data</li><li>Charts and sparklines</li><li>Print setup</li></ul></div>
-</div> -->
+</div>
 <div class="card-foot"><a class="btn btn-navy" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank" rel="noopener">Choose Associate</a><button class="btn btn-line" type="button" data-syllabus="associate">Syllabus</button></div>
 </article>
 <article class="card expert">
 <div class="card-head"><span class="level">Expert</span><h3>MOS Excel 2019 Expert</h3><p>Prepares you for Exam MO-201</p></div>
 <div class="card-body">
-<div style="text-align: center;">
-  <div class="price">
-    <strong>$1,880</strong>
-    <span>per student</span>
-  </div>
-  <p class="price-note">
-    <b>40 hrs</b> of coaching · only <b>3 seats</b> per cohort
-  </p>
+<div style="text-align:center;">
+  <div class="price"><strong>$1,880</strong><span>per student</span></div>
+  <p class="price-note"><b>40 hrs</b> of coaching · only <b>3 seats</b> per cohort</p>
 </div>
-<!-- <p class="card-desc">Show advanced analysis and automation skills across every MO-201 objective. Built for analysts, finance professionals and power users.</p> -->
-<!-- <p class="fit"><b>Choose this if</b> you're already confident in Excel and hold the Associate credential or equivalent proficiency.</p> -->
-<!-- <ul class="specs"><li><svg class="i"><use href="#i-users"/></svg><span><b>Class size:</b> 1 coach to 3 students</span></li><li><svg class="i"><use href="#i-award"/></svg><span><b>Included:</b> MOS exam voucher with 1 extra retake</span></li> -->
-  <!-- <li><svg class="i"><use href="#i-check"/> -->
-  </svg>
-  <!-- <span><b>Suited to:</b> Associate holders or equivalent proficiency</span></li> -->
-</ul>
-<!-- <div><p class="topics-title">What you'll learn</p><ul class="chips"><li>Conditional formatting rules</li><li>Advanced formulas and lookups</li><li>Data validation and auditing</li><li>Forecasting and What-If analysis</li><li>Macros</li><li>PivotTables and PivotCharts</li><li>Collaboration</li></ul></div>
-</div> -->
+</div>
 <div class="card-foot"><a class="btn btn-deep" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank" rel="noopener">Choose Expert</a><button class="btn btn-line" type="button" data-syllabus="expert">Syllabus</button></div>
 </article>
-</div></div></section>
+</div>
+
+<!-- Grand slam offer -->
+<div class="offer">
+<div class="offer-head">
+<span class="offer-kicker">Everything included in either programme</span>
+<h3>Here's everything you get for $1,880</h3>
+<p>Over $5,500 of coaching, exam fees and guarantees, bundled into one price.</p>
+</div>
+<table class="offer-table">
+<thead><tr><th scope="col">What you get</th><th scope="col">Value</th></tr></thead>
+<tbody>
+<tr><td><span class="tag">Core</span><b>40 hours of instructor-led MOS Excel coaching</b>In a 3-student cohort with personalised feedback</td><td class="val">$2,000</td></tr>
+<tr><td><span class="tag">Bonus 1</span><b>MOS Excel Exam voucher included</b>Plus 1 extra retake</td><td class="val">$165</td></tr>
+<tr><td><span class="tag">Bonus 2</span><b>Free class retake if you don't pass</b>Repeat the coaching programme at no additional cost</td><td class="val">$2,000</td></tr>
+<tr><td><span class="tag">Bonus 3</span><b>Timed mock exams + objective checklists</b>Practise under real exam conditions</td><td class="val">$400</td></tr>
+<tr><td><span class="tag">Bonus 4</span><b>50% refund if you still don't pass</b>After your second attempt, subject to guarantee terms</td><td class="val">$940</td></tr>
+<tr class="total"><td>Total real value</td><td class="val">$5,505</td></tr>
+<tr class="invest"><td>Your investment</td><td class="val">$1,880</td></tr>
+<tr class="save"><td>You save</td><td class="val">$3,625</td></tr>
+</tbody></table>
+<div class="offer-foot">
+<span><b>Only 3 seats per cohort.</b> Reserve yours before the cohort fills.</span>
+<a class="btn btn-teal" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank" rel="noopener">Reserve your seat</a>
+</div>
+</div>
+
+</div></section>
 
 <section class="band" id="why"><div class="wrap">
 <div class="head"><h2>Why only 3 students?</h2><p>With only 3 students per instructor, every student gets hands-on attention. Your work is reviewed, weaknesses are identified, and coaching is tailored to what you actually need to improve.</p></div>
