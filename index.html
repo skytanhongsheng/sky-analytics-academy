@@ -438,37 +438,44 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
   
 <!-- Paste this whole block in place of your existing <section id="courses"> ... </section> -->
 <style>
-/* Grand slam offer / value stack */
-.offer{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
-.offer-head{padding:30px 36px;color:#fff;background:linear-gradient(135deg,var(--ink),var(--navy) 60%,#12406a);position:relative;overflow:hidden}
-.offer-head::after{content:'';position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(58,184,185,.18)}
-.offer-head>*{position:relative;z-index:1}
-.offer-kicker{display:inline-block;font-size:.8rem;font-weight:600;padding:5px 13px;border-radius:999px;background:rgba(255,255,255,.14);margin-bottom:12px}
-.offer-head h3{font-family:var(--serif);font-size:1.7rem;line-height:1.2}
-.offer-head p{margin-top:6px;font-size:.95rem;color:#b4c6d6}
-.offer-table{width:100%;border-collapse:collapse;font-size:.95rem}
-.offer-table th,.offer-table td{padding:16px 36px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-.offer-table thead th{background:var(--mist);color:var(--muted);font-size:.82rem;font-weight:600}
-.offer-table th:last-child,.offer-table td:last-child{text-align:right;white-space:nowrap}
-.offer-table td{color:var(--muted)}
-.offer-table td b{display:block;color:var(--ink);font-weight:600}
-.offer-table .tag{margin-right:8px;background:var(--teal-tint);border-color:#bfe3e3;color:var(--teal-deep)}
-.offer-table .val{color:var(--ink);font-weight:600}
-.offer-table tr.total td{background:var(--mist);color:var(--ink);font-weight:700}
-.offer-table tr.invest td{background:var(--teal-tint);color:var(--ink);font-weight:700;font-size:1.1rem}
-.offer-table tr.invest .val{font-size:1.5rem;color:var(--teal-deep)}
-.offer-table tr.save td{border-bottom:0;color:var(--teal-deep);font-weight:700}
-.offer-table tr.save .val{color:var(--teal-deep);font-size:1.15rem}
-.offer-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:22px 36px;background:var(--mist);border-top:1px solid var(--line)}
-.offer-foot span{font-size:.88rem;color:var(--muted)}
-.offer-foot b{color:var(--ink)}
+/* Grand slam offer v2 */
+.offer{margin-top:48px;display:grid;grid-template-columns:1.4fr .8fr;gap:28px;align-items:start}
+.offer-main{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:36px}
+.offer-kicker{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-deep);background:var(--teal-tint);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.offer-main h3{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2;color:var(--ink)}
+.offer-sub{color:var(--muted);margin:8px 0 24px;font-size:.95rem}
+.stack{list-style:none;display:grid;gap:12px}
+.stack li{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--mist);transition:transform .25s var(--ease),border-color .25s,background .25s}
+.stack li:hover{transform:translateX(4px);background:#fff;border-color:#b9d6d9}
+.stack .chk{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--teal-deep);color:#fff;font-size:1.1rem}
+.stack .core .chk{background:var(--brand)}
+.stack .lbl{display:block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:2px}
+.stack .core .lbl{color:var(--brand)}
+.stack strong{display:block;color:var(--ink);font-size:.98rem;line-height:1.35}
+.stack small{display:block;color:var(--muted);font-size:.85rem;margin-top:2px;line-height:1.45}
+.stack .v{text-align:right;white-space:nowrap}
+.stack .v b{display:block;font-size:1.05rem;color:var(--ink)}
+.stack .v span{font-size:.72rem;color:var(--muted)}
+.stack .core{background:#fff;border-color:#b9c9d8;box-shadow:var(--shadow-sm)}
+.deal{position:sticky;top:96px;color:#fff;border-radius:var(--r-lg);padding:34px 30px;text-align:center;overflow:hidden;box-shadow:var(--shadow-lg);background:radial-gradient(400px 260px at 100% 0%,rgba(34,162,163,.4),transparent 65%),linear-gradient(155deg,var(--ink),var(--navy) 60%,#12406a)}
+.deal-row{display:flex;justify-content:space-between;font-size:.95rem;color:#b4c6d6;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.deal-row s{color:#fff;opacity:.75;text-decoration-thickness:2px;text-decoration-color:#ff8a8a}
+.deal-label{margin-top:22px;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7fdcdc}
+.deal-price{font-family:var(--serif);font-size:3.6rem;font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.deal-per{font-size:.88rem;color:#b4c6d6}
+.deal-save{display:inline-block;margin:18px 0 22px;padding:9px 18px;border-radius:999px;font-weight:700;font-size:.92rem;color:var(--ink);background:linear-gradient(90deg,var(--teal-bright),#8fe6e6)}
+.deal .btn{width:100%;padding:17px 24px;font-size:1rem}
+.deal-note{margin-top:14px;font-size:.82rem;color:#9fb4c6}
+.deal-note b{color:#fff}
+@media(max-width:1000px){.offer{grid-template-columns:1fr}.deal{position:static}}
 @media(max-width:560px){
-.offer{margin-top:28px}
-.offer-head{padding:24px 22px}.offer-head h3{font-size:1.4rem}
-.offer-table{font-size:.88rem}
-.offer-table th,.offer-table td{padding:14px 18px}
-.offer-foot{padding:18px 22px;flex-direction:column;align-items:stretch}
-.offer-foot .btn{width:100%}
+.offer{margin-top:32px;gap:20px}
+.offer-main{padding:22px 16px}
+.stack li{grid-template-columns:auto 1fr;padding:14px}
+.stack .v{grid-column:2;text-align:left;display:flex;gap:6px;align-items:baseline}
+.stack .v b{font-size:.95rem}
+.deal{padding:28px 20px}
+.deal-price{font-size:3rem}
 }
 </style>
 
@@ -497,33 +504,31 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 </article>
 </div>
 
-<!-- Grand slam offer -->
 <div class="offer">
-<div class="offer-head">
-<span class="offer-kicker">Everything included in either programme</span>
-<h3>Here's everything you get for $1,880</h3>
-<p>Over $5,500 of coaching, exam fees and guarantees, bundled into one price.</p>
+<div class="offer-main">
+<span class="offer-kicker">Included with either programme</span>
+<h3>Everything you need to pass, plus a safety net</h3>
+<p class="offer-sub">Over $5,500 of coaching, exam fees and guarantees in one price.</p>
+<ul class="stack">
+<li class="core"><span class="chk"><svg class="i"><use href="#i-check"/></svg></span><div><span class="lbl">Core programme</span><strong>40 hours of instructor-led MOS Excel coaching</strong><small>In a 3-student cohort with personalised feedback</small></div><div class="v"><b>$2,000</b><span>value</span></div></li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span><div><span class="lbl">Bonus 1</span><strong>MOS Excel Exam voucher included</strong><small>Plus 1 extra retake</small></div><div class="v"><b>$165</b><span>value</span></div></li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span><div><span class="lbl">Bonus 2</span><strong>Free class retake if you don't pass</strong><small>Repeat the coaching programme at no additional cost</small></div><div class="v"><b>$2,000</b><span>value</span></div></li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span><div><span class="lbl">Bonus 3</span><strong>Timed mock exams + objective checklists</strong><small>Practise under real exam conditions</small></div><div class="v"><b>$400</b><span>value</span></div></li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span><div><span class="lbl">Bonus 4</span><strong>50% refund if you still don't pass</strong><small>After your second attempt, subject to guarantee terms</small></div><div class="v"><b>$940</b><span>value</span></div></li>
+</ul>
 </div>
-<table class="offer-table">
-<thead><tr><th scope="col">What you get</th><th scope="col">Value</th></tr></thead>
-<tbody>
-<tr><td><span class="tag">Core</span><b>40 hours of instructor-led MOS Excel coaching</b>In a 3-student cohort with personalised feedback</td><td class="val">$2,000</td></tr>
-<tr><td><span class="tag">Bonus 1</span><b>MOS Excel Exam voucher included</b>Plus 1 extra retake</td><td class="val">$165</td></tr>
-<tr><td><span class="tag">Bonus 2</span><b>Free class retake if you don't pass</b>Repeat the coaching programme at no additional cost</td><td class="val">$2,000</td></tr>
-<tr><td><span class="tag">Bonus 3</span><b>Timed mock exams + objective checklists</b>Practise under real exam conditions</td><td class="val">$400</td></tr>
-<tr><td><span class="tag">Bonus 4</span><b>50% refund if you still don't pass</b>After your second attempt, subject to guarantee terms</td><td class="val">$940</td></tr>
-<tr class="total"><td>Total real value</td><td class="val">$5,505</td></tr>
-<tr class="invest"><td>Your investment</td><td class="val">$1,880</td></tr>
-<tr class="save"><td>You save</td><td class="val">$3,625</td></tr>
-</tbody></table>
-<div class="offer-foot">
-<span><b>Only 3 seats per cohort.</b> Reserve yours before the cohort fills.</span>
+<aside class="deal" aria-label="Offer summary">
+<div class="deal-row"><span>Total real value</span><s>$5,505</s></div>
+<div class="deal-label">Your investment</div>
+<div class="deal-price">$1,880</div>
+<div class="deal-per">per student · one-time</div>
+<div class="deal-save">You save $3,625</div>
 <a class="btn btn-teal" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank" rel="noopener">Reserve your seat</a>
-</div>
+<p class="deal-note"><b>Only 3 seats</b> per cohort</p>
+</aside>
 </div>
 
 </div></section>
-
 <section class="band" id="why"><div class="wrap">
 <div class="head"><h2>Why only 3 students?</h2><p>With only 3 students per instructor, every student gets hands-on attention. Your work is reviewed, weaknesses are identified, and coaching is tailored to what you actually need to improve.</p></div>
 <!-- <div class="vs-wrap"><table class="vs">
