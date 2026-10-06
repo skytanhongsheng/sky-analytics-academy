@@ -397,6 +397,9 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 .ostack-table strong{font-size:.92rem}
 .t-invest .val{font-size:1.45rem}
 }
+/* Strikethrough price */
+.price-was{display:block;font-size:1.15rem;font-weight:600;color:var(--muted);text-decoration-thickness:2px;text-decoration-color:#e05a5a;margin-bottom:2px}
+.price-save{display:inline-block;margin-top:8px;padding:4px 14px;border-radius:999px;font-size:.82rem;font-weight:700;background:var(--teal-tint);color:var(--teal-deep)}
   
 </style>
 </head>
@@ -472,6 +475,9 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 /* Grand slam offer v2 */
 
 /* Combined programme card */
+/* Equal-width choose buttons */
+.track-btns .btn:first-child{width:190px;flex:none}
+.track-btns .btn-line{min-width:110px}
 .cards-one{grid-template-columns:1fr;max-width:780px;margin:0 auto}
 .combo .card-head{background:linear-gradient(135deg,#163a5c,var(--brand) 55%,var(--teal-deep))}
 .tracks{display:grid;gap:14px;padding-top:22px;border-top:1px solid var(--line)}
@@ -539,7 +545,10 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 </div>
 <div class="card-body">
 <div style="text-align:center;">
-<div class="price"><strong>$1,880</strong><span>per student</span></div>
+<div class="price">
+<s class="price-was">$5,505</s>
+<strong>$1,880</strong><span>per student</span>
+</div>
 <p class="price-note"><b>40 hrs</b> of coaching · only <b>3 seats</b> per cohort</p>
 </div>
 
