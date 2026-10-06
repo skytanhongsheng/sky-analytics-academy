@@ -437,6 +437,17 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 .price-now strong{font-size:3rem}
 .price-pills li{font-size:.8rem;padding:7px 12px}
 }  
+
+/* Included checklist */
+.inc-title{margin-bottom:20px}
+.inc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.inc-list li{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--mist);border:1px solid var(--line);border-radius:var(--r-md);font-weight:500;color:var(--ink);font-size:.95rem;line-height:1.35}
+.inc-list .chk{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--teal-deep);color:#fff;font-size:1rem;flex-shrink:0}
+.inc-pass{margin-top:24px;padding:20px 24px;border-radius:var(--r-md);text-align:center;color:#fff;font-family:var(--serif);font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:700;letter-spacing:.04em;background:linear-gradient(135deg,var(--brand),var(--teal-deep))}
+@media(max-width:560px){
+.inc-list{grid-template-columns:1fr}
+.inc-list li{padding:12px 14px}
+}
 </style>
 </head>
 <body>
@@ -581,10 +592,7 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 <div class="card-body">
 <div style="text-align:center;">
 <div class="pricebox">
-<div class="pricebox-top">
-<s class="price-was">$5,505</s>
-<span class="price-save">Save $3,625</span>
-</div>
+
 <div class="price-now"><strong>$1,880</strong><span>per student</span></div>
 <ul class="price-pills">
 <li><svg class="i"><use href="#i-clock"/></svg><b>40 hrs</b> of coaching</li>
@@ -617,23 +625,19 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 
 
 
-<table class="ostack-table">
-<thead>
-<tr><th scope="col">What You Get</th><th scope="col">Value</th></tr>
-</thead>
-<tbody>
-<tr class="core"><td><span class="lbl">Core</span><strong>40 hours of instructor-led MOS Excel coaching<br>with Certificate of Completion</strong><small>In a 3-student cohort</small></td><td class="val">$2,000</td></tr>
-<tr><td><span class="lbl">Bonus 1</span><strong>MOS Excel Exam voucher included</strong><small>With 1 extra retake</small></td><td class="val">$165</td></tr>
-<tr><td><span class="lbl">Bonus 2</span><strong>Timed mock exams + objective checklists</strong></td><td class="val">$400</td></tr>
-<tr><td><span class="lbl">Bonus 3</span><strong>Free class retake if you don't pass</strong></td><td class="val">$2,000</td></tr>
-<tr><td><span class="lbl">Bonus 4</span><strong>50% refund if you do not pass</strong></td><td class="val">$940</td></tr>
-</tbody>
-<tfoot>
-<tr class="t-total"><th scope="row">Total Real Value</th><td class="val"><s>$5,505</s></td></tr>
-<tr class="t-invest"><th scope="row">Your Investment</th><td class="val">$1,880</td></tr>
-</tfoot>
-</table>
-
+<div class="ostack">
+<h3 class="inc-title">Everything included</h3>
+<ul class="inc-list">
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>40 hours instructor-led coaching</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>3 students per cohort</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>Day-one diagnostic</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>Personalised feedback</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>Practice files &amp; checklists</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>Timed mock exams</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>MOS exam + 1 extra retake</li>
+<li><span class="chk"><svg class="i"><use href="#i-check"/></svg></span>Free coaching retake</li>
+</ul>
+<div class="inc-pass">PASS &mdash; OR GET 50% BACK</div>
 </div>
   
 </div></section>
