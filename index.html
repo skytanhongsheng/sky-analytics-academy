@@ -383,6 +383,25 @@ h2::after{content:'';display:block;width:56px;height:4px;border-radius:4px;margi
 .ostack-table .val{font-weight:700;color:var(--ink);font-size:1.05rem}
 .ostack-table tfoot th{text-align:left;padding:14px 20px;font-weight:600;color:var(--ink)}
 .ostack-table tfoot td{padding:14px 20px}
+  /* Core / Bonus labels: rounded rectangle badges */
+.ostack-table .lbl{
+  display:inline-block;
+  padding:4px 12px;
+  margin-bottom:6px;
+  border-radius:8px;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  background:var(--teal-tint);
+  color:var(--teal-deep);
+  border:1px solid #bfe3e3;
+}
+.ostack-table .core .lbl{
+  background:var(--brand);
+  color:#fff;
+  border-color:var(--brand);
+}
 .t-total th,.t-total td{background:#fff;border-bottom:1px solid var(--line)}
 .t-total s{color:var(--muted);text-decoration-thickness:2px;text-decoration-color:#e05a5a}
   /* Total Real Value: soft brown */
