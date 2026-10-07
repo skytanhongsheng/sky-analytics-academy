@@ -2631,7 +2631,7 @@
 
       .cards-two .track-btns {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 10px
       }
 
@@ -3033,7 +3033,15 @@
         background: #fff
       }
       .cards-two .card.combo .tracks {
-        border-top-color: rgba(10, 33, 56, .12)
+        border-top-color: rgba(10, 33, 56, .12);
+        grid-template-columns: 1fr 1fr;
+        gap: 10px
+      }
+
+      @media(max-width:420px) {
+        .cards-two .card.combo .tracks {
+          grid-template-columns: 1fr
+        }
       }
     </style>
     <section class="band band-mist" id="courses">
@@ -3065,15 +3073,11 @@
 
                 <div class="tracks">
                     <div class="track-btns">
-                      <a class="btn btn-navy" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank"
-                        rel="noopener">Premium - Associate</a>
-                      <button class="btn btn-line" type="button" data-syllabus="associate">Syllabus</button>
+                      <a class="btn btn-navy" href="#syllabus-associate" role="button" data-syllabus="associate">Associate Syllabus<br>(MO-200)</a>
                     </div>
 
                     <div class="track-btns">
-                      <a class="btn btn-deep" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank"
-                        rel="noopener">Premium - Expert</a>
-                      <button class="btn btn-line" type="button" data-syllabus="expert">Syllabus</button>
+                      <a class="btn btn-deep" href="#syllabus-expert" role="button" data-syllabus="expert">Expert Syllabus<br>(MO-201)</a>
                     </div>
                 </div>
               </div>
@@ -3099,14 +3103,10 @@
                 </div>
                 <div class="tracks">
                     <div class="track-btns">
-                      <a class="btn btn-navy" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank"
-                        rel="noopener">Luxury - Associate</a>
-                      <button class="btn btn-line" type="button" data-syllabus="associate">Syllabus</button>
+                      <a class="btn btn-navy" href="#syllabus-associate" role="button" data-syllabus="associate">Associate Syllabus<br>(MO-200)</a>
                     </div>
                     <div class="track-btns">
-                      <a class="btn btn-deep" href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" target="_blank"
-                        rel="noopener">Luxury - Expert</a>
-                      <button class="btn btn-line" type="button" data-syllabus="expert">Syllabus</button>
+                      <a class="btn btn-deep" href="#syllabus-expert" role="button" data-syllabus="expert">Expert Syllabus<br>(MO-201)</a>
                     </div>
                 </div>
               </div>
@@ -3390,7 +3390,7 @@
       b.innerHTML = s.m.map((m, i) => `<div class="mod"><h4><span>${i + 1}</span>${m[0]}</h4><p>${m[1]}</p></div>`).join('') + `<div class="mod"><h4><span>★</span>Capstone project</h4><p>A final project that pulls every module together, at a pace that suits you.</p></div>`;
       b.scrollTop = 0; document.body.style.overflow = 'hidden'; d.showModal()
     }
-    document.querySelectorAll('[data-syllabus]').forEach(x => x.addEventListener('click', () => open(x.dataset.syllabus, x)));
+    document.querySelectorAll('[data-syllabus]').forEach(x => x.addEventListener('click', e => { e.preventDefault(); open(x.dataset.syllabus, x) }));
     ['sylX', 'sylClose'].forEach(i => document.getElementById(i).addEventListener('click', () => d.close()));
     d.addEventListener('click', e => { if (e.target === d) d.close() });
     d.addEventListener('close', () => { document.body.style.overflow = ''; if (last) last.focus() });
