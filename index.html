@@ -2996,35 +2996,38 @@
     </style>
 
     <style>
-      /* Premium (1-on-3) = light green, Luxury (1-on-1) = light blue */
+      /* Premium (1-on-3) = deep emerald with champagne accents; Luxury (1-on-1) = midnight with gold */
       .cards-two .card.combo:not(.premium) {
-        border: 2px solid #a8dcb9;
-        background: #f2fbf5
+        border: 2px solid #1b6b50;
+        background: #f3f9f6
       }
       .cards-two .card.combo:not(.premium) .card-head {
-        background: linear-gradient(135deg, #e4f6ea, #c9ecd7)
-      }
-      .cards-two .card.combo:not(.premium) .level {
-        background: #fff;
-        color: #1f7a45
+        background: linear-gradient(135deg, #0a3d2e, #115b43 55%, #1b7a5a);
+        color: #fff
       }
       .cards-two .card.premium {
-        border: 2px solid #9fc9ec;
-        background: #f1f7fd
+        border: 2px solid #c9a24b;
+        background: #fbf8ef
       }
       .cards-two .card.premium .card-head {
-        background: linear-gradient(135deg, #e4f0fb, #cbe2f6)
+        background: linear-gradient(135deg, #070d18, #111b2e 55%, #1d2b45);
+        color: #fff
       }
-      .cards-two .card.premium .level {
-        background: #fff;
-        color: #1d5f99
+      .cards-two .card.combo .level {
+        background: linear-gradient(135deg, #e7c76a, #c9a24b);
+        color: #1a1405
       }
-      .cards-two .card.combo .card-head,
       .cards-two .card.combo .card-head h3 {
-        color: var(--ink)
+        color: #fff
       }
       .cards-two .card.combo .card-head::after {
-        background: rgba(255, 255, 255, .45)
+        background: rgba(255, 255, 255, .07)
+      }
+      .cards-two .card.premium .price-now strong {
+        color: #8a6a1c
+      }
+      .cards-two .card.combo:not(.premium) .price-now strong {
+        color: #0a3d2e
       }
       .cards-two .card.combo .price-pills li {
         background: #fff
@@ -3276,8 +3279,8 @@
             </p>
 
             <p>
-              For approximately every <strong>20 students paid coaching</strong>, we plan to <strong>sponsor 1
-                student</strong> free of charge <strong>to lower-income individuals</strong> who cannot otherwise afford
+              For approximately every <strong>20 paid coaching batches</strong>, we plan to <strong>sponsor 1
+                batch</strong> free of charge <strong>to lower-income individuals</strong> who cannot otherwise afford
               it, helping more people gain practical Excel skills and recognised certification regardless of their
               financial circumstances.
             </p>
