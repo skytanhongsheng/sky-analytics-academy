@@ -2565,6 +2565,8 @@
 
         </ul>
       </nav>
+      <a href="https://forms.cloud.microsoft/r/G1AKTW9WQ8" class="btn btn-teal nav-cta" target="_blank"
+        rel="noopener">Reserve your seat</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
         aria-controls="navLinks"><svg class="i">
           <use href="#i-menu" />
@@ -3086,7 +3088,14 @@
           font-size: .72rem
         }
       }
-    </style>
+        /* Reserve-your-seat button: keep visible on small screens */
+    .nav-cta { white-space: nowrap }
+    @media(max-width:560px) {
+      .nav-in { gap: 12px }
+      .nav-cta { display: inline-flex; margin-left: auto; padding: 9px 14px; font-size: .8rem }
+      .nav-toggle { margin-left: 0 }
+    }
+  </style>
     <section class="band band-mist" id="courses">
       <div class="wrap">
         <div class="head">
